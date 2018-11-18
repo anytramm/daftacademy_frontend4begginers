@@ -1,0 +1,111 @@
+body{
+   background-color: rgb(37, 7, 46); 
+   background-image: url(background.svg);
+   background-attachment: fixed;
+   height: 100%;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   font-family: 'Open sans';
+}
+h1{
+    color: rgba(0, 0, 0, 0%);
+}
+
+h2{
+    font-weight: bold; 
+    color: #ef008e;
+    font-size: 28px;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.nav{
+    position: fixed;
+    top: 50px;
+    left: 50px;
+}
+
+.nav-list{
+    list-style-type: none;
+    
+}
+
+.nav-list__item-link{
+    font-size: 13px;
+    color: #ef008e;
+    text-decoration: none;  
+    font-weight: bold;  
+}
+
+
+.home-list__member{
+    display: inline;
+    list-style-type: none;
+    padding-right: 20px;
+    float: left;
+}
+
+.member-name{
+    font-weight: bold;
+    font-size: 15px;
+    color: #d8d8fb;
+    text-transform: uppercase;
+}
+
+.member-role{
+    font-size: 13px;
+    color: #ccc8ff;
+}
+
+
+.social{
+    position: fixed;
+    bottom: 20px;
+    left: 50px;
+
+}
+
+.section-home, .section-about, .section-concerts, .section-video, .section-photos, .section-contact{
+    position: relative;
+    min-height: 100vh;
+    margin-left: 15%;
+    margin-right: 5%;
+
+}
+
+.about__info-title{
+    color:#d8d8fb;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.about__info-text{
+    color:#ccc8ff;
+    font-size: 13px;
+
+}
+
+.concerts-list{
+    list-style-type: none;
+}
+
+.concerts__info-date{
+    font-size: 15px;
+    font-weight: bold;
+    color:#d8d8fb;
+    margin: 0;
+}
+.concerts__info-location{
+    font-size: 13px;
+    color: #ccc8ff;
+    float:left;
+}
+
+.concerts__info-button{
+    float:right;
+}
+
+.photos__gallery{
+    list-style-type: none;
+}
