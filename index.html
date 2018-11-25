@@ -9,208 +9,214 @@
 	</head>
 	
 	<body>
-		<nav class="nav">
-			<img src="logo.png" alt="logo">
-			<ul class="nav-list">
-				<li class="nav-list__item">
-					<a class="nav-list__item-link" href="#home">HOME</a>
-				</li>
-				<li class="nav-list__item">
-					<a class="nav-list__item-link" href="#about">ABOUT</a>
-				</li>
-				<li class="nav-list__item">
-					<a class="nav-list__item-link" href="#concerts">CONCERTS</a>
-				</li>
-				<li class="nav-list__item">
-					<a class="nav-list__item-link" href="#video">VIDEO</a>
-				</li>
-				<li class="nav-list__item">
-					<a class="nav-list__item-link" href="#photos">PHOTOS</a>
-				</li>
-				<li class="nav-list__item">
-					<a class="nav-list__item-link" href="#contact">CONTACT</a>
-				</li>
-			</ul>
-		</nav>	
+		<header class="page-header"></header>
+			<nav class="page-nav">
+				<h1>
+						<img src="logo.png" alt="logo">
+				</h1>
+				<ul class="page-nav-list">
+					<li class="page-nav-list__item">
+						<a class="page-nav-list__link" href="#home">HOME</a>
+					</li>
+					<li class="page-nav-list__item">
+						<a class="page-nav-list__link" href="#about">ABOUT</a>
+					</li>
+					<li class="page-nav-list__item">
+						<a class="page-nav-list__link" href="#concerts">CONCERTS</a>
+					</li>
+					<li class="page-nav-list__item">
+						<a class="page-nav-list__link" href="#video">VIDEO</a>
+					</li>
+					<li class="page-nav-list__item">
+						<a class="page-nav-list__link" href="#photos">PHOTOS</a>
+					</li>
+					<li class="page-nav-list__item">
+						<a class="page-nav-list__link" href="#contact">CONTACT</a>
+					</li>
+				</ul>
+			</nav>	
+		</header>
 
-		<section class="social">
-			<div class="social__link">
-				<a href="https://www.facebook.com/6BMband/">
-					<img src="fb.svg" alt="fb"/>
-				</a>
-			</div>
-			<div class="social__link">
-				<a href="https://www.instagram.com/6bmband//">
-					<img src="insta.svg" alt="insta"/>
-				</a>
-			</div>
 
-			<div class="social__link"> 
-				<a href="https://www.last.fm/pl/music/6bm">
-					<img src="last.svg" alt="las"/>
-				</a>
-			</div>
-			
-			<div class="social__link">
-				<a href="https://www.youtube.com/channel/UCDqm0F_UFieDt_C4TRPbepQ?sub_confirmation=1">
-					<img src="yout.svg" alt="yout"/>
-				</a>
-			</div>
-		</section>
-
-		<section class="section-home" id="home">
-			<h1>6BM</h1>
-			<ul class="home-list">
-				<li class="home-list__member"><img src="band-member01.png" alt="band-member01" />
-					<div class="member-name">Kamil Zgondek</div> 
-					<div class="member-role">Keys</div>
-				</li>
-				<li class="home-list__member"><img src="band-member02.png" alt="band-member02"/>
-					<div class="member-name">Łukasz Furman</div> 
-					<div class="member-role">Vocals</div>
-				</li>
-				<li class="home-list__member"><img src="band-member03.png" alt="band-member03"/>
-					<div class="member-name">Kamil Majewski</div> 
-					<div class="member-role">Drums</div>
-				</li>
-				<li class="home-list__member"><img src="band-member04.png" alt="band-member04"/>
-					<div class="member-name">Daniel Cajzer</div> 
-					<div class="member-role">Bass guitar</div>
-				</li>
-			</ul>
-		</section>
+		<main id="home" class="page-content">
+			<section id="home" class="content-section">
+				<h2 class="screen-reader-only">6BM</h2>
+				<ul class="band-members">
+					<li class="band-members__item">
+						<img class="band-members__image" src="band-member01.png" alt="band-member01" />
+						<p class="band-members__name">Kamil Zgondek</p> 
+						<p class="band-members__role">Keys</p>
+					</li>
+					<li class="band-members__item">
+						<img class="band-members__image" src="band-member02.png" alt="band-member02" />
+						<p class="band-members__name">Łukasz Furman</p> 
+						<p class="band-members__role">Vocals</p>
+					</li>
+					<li class="band-members__item">
+						<img class="band-members__image" src="band-member03.png" alt="band-member03"/>
+						<p class="band-members__name">Kamil Majewski</p> 
+						<p class="band-members__role">Drums</p>
+					</li>
+					<li class="band-members__item">
+						<img class="band-members__image" src="band-member04.png" alt="band-member04"/>
+						<p class="band-members__name">Daniel Cajzer</p> 
+						<p class="band-members__role">Bass guitar</p>
+					</li>
+				</ul>
+			</section>
 		
-		<section class="section-about" id="about">
-			<h2 class="about__header">About</h2>
-			<img class="about__image" src="band01.jpg" alt="band01"/>
-			
-			<article class="about__info">
-				<p class="about__info-title">STRAICHT FROM LUBLIN</p>
+			<section id="about" class="content-section section-about">
+				<h2 class="content-section__header">About</h2>
+				<img class="content-section__image" src="band01.jpg" alt="band01"/>
+				<div class="about-section__text">
+					<h3 class="about-section__text-header">Straight from Lublin</h3>
+					<p class="about-section__text-text">
+						6BM is a young band which has it's origins in the city of Lublin, playing music described as electrorock.<br/>
+						Band members aim to convey emotions, reflexion but also hope.<br/><br/>
+						They are inspired by various genres, like: alternetive rock, nu-metal, synthwave or even drum'n'bass.<br/>
+						As for now they released their debut EP - TRINITY and they started working on their first full length album.
+					</p>
+				</div>
+			</section>
 
-				<p class="about__info-text">6BM is a young band which has it's origins in the city of Lublin,playing music described as electrorock. 
-					Band members aim to convey emotions, reflexion but also hope.</p>
+			<section id="concerts" class="content-section section-concerts">
+				<h2 class="content-section__header">Concerts</h2>
+				<div class="concerts">
+					<article class="concerts__item">
+						<img class="concerts__image" src="band02_WiechnikMarcin.jpg" alt="band02_WiechnikMarcin" />
+						<header class="concerts__ticket">
+							<div class="concetr__info">
+								<p class="concerts__date">20.12.2018</p> 
+								<p class="concerts__location">Lublin, klub XXX</p>
+							</div>
+							<button class="concerts__button button">Buy ticket</button>
+						</header>
+					</article>
 
-				<p class="about__info-text">They are inspired by various genres, like: alternetive rock, nu-metal, synthwave or even drum'n'bass.
-					As for now they released their debut EP - TRINITY and their first full length album.</p>
-			</article>
-		</section>
+					<article class="concerts__item">
+						<img class="concerts__image" src="band03_WiechnikMarcin.jpg" alt="band03_WiechnikMarcin" />
+						<header class="concerts__ticket">
+							<div class="concetr__info">
+								<p class="concerts__date">20.12.2018</p> 
+								<p class="concerts__location">Warszawa, klub YYY</p>
+							</div>
+							<button class="concerts__button button">Buy ticket</button>
+						</header>
+					</article>
 
-		<section class="section-concerts" id="concerts">
-			<h2 class="concerts-header">Concerts</h2>
-			<ul class="concerts-list">
-				<li>
-					<img class="concerts-list__image" src="band02_WiechnikMarcin.jpg" alt="band02_WiechnikMarcin" />
-					<footer class="concerts-list__info">
-						<span>
-							<p class="concerts__info-date">20.12.2018</p> 
-							<p class="concerts__info-location">Lublin, klub XXX</p>
-						</span>
-						<button class="concerts__info-button">Buy ticket</button>
-					</footer>
-				</li>
-			
-			
-				<li>
-					<img class="concerts__image" src="band03_WiechnikMarcin.jpg" alt="band03_WiechnikMarcin" />
-					<footer class="concerts__info">
-						<span>
-							<p class="concerts__info-date">20.12.2018</p>  
-							<p class="concerts__info-location">Warszawa, klub YYY</p>
-						</span>
-						<button>Buy ticket</button>
-					</footer>
-				</li>
-			
-				<li>
-					<img class="concerts__image" src="band04_JakubBodys.jpg" alt="band04_JakubBodys"/>
-					<footer class="concerts__info">
-						<span>
-							<p class="concerts__info-date">20.12.2018</p>  
-							<p class="concerts__info-location">Kraków, klub ZZZ</p>
-						</span>
-						<button>Buy ticket</button>
-					</footer>
-				</li>
-			
-				<li>
-					<img class="concerts__image" src="band05_JakubBodys.jpg" alt="band05_JakubBodys." />
-					<footer class="concerts__info">
-						<span>
-							<p class="concerts__info-date">20.12.2018</p>  
-							<p class="concerts__info-location">Poznać, klub AAA</p>
-						</span>
-					<button>Buy ticket</button>
-				</footer>
-				</li>
-			</ul>	
-		</section>
+					<article class="concerts__item">
+						<img class="concerts__image" src="band04_JakubBodys.jpg" alt="band04_JakubBodys"/>
+						<header class="concerts__ticket">
+							<div class="concetr__info">
+								<p class="concerts__date">20.12.2018</p> 
+								<p class="concerts__location">Kraków, klub ZZZ</p>
+							</div>
+							<button class="concerts__button button">Buy ticket</button>
+						</header>
+					</article>
+
+					<article class="concerts__item">
+						<img class="concerts__image" src="band05_JakubBodys.jpg" alt="band05_JakubBodys." />
+						<header class="concerts__ticket">
+							<div class="concetr__info">
+								<p class="concerts__date">20.12.2018</p> 
+								<p class="concerts__location">Poznać, klub AAA</p>
+							</div>
+							<button class="concerts__button button">Buy ticket</button>
+						</header>
+					</article>
+				</div>	
+			</section>
 			
 
-		<section class="section-video" id="video">
-			<h2 class="video__header">Video</h2>
-			<iframe class="video__link" width="560" height="315" src="https://www.youtube.com/embed/AstRXh-vKNI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		</section>
+			<section id="video" class="content-section section-video">
+				<h2 class="content-section__header">Video</h2>
+				<iframe class="video__link" width="560" height="315" src="https://www.youtube.com/embed/AstRXh-vKNI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</section>
 
-		<section class="section-photos" id="photos">
-			<h2 class="photos__header">Photos</h2>
-			<ul class="photos__gallery">
-				<li class="photos__gallery-item">
-					<img class="gallery-item__photo" src="band05_JakubBodys.jpg" alt="band05_JakubBodys"/>
+			<section id="photos" class="content-section section-photos">
+				<h2 class="content-section__header">Photos</h2>
+				<ul class="gallery">
+					<li class="gallery__item">
+						<img class="gallery__image" src="band05_JakubBodys.jpg" alt="band05_JakubBodys"/>
+					</li>
+					<li class="gallery__item">
+						<img class="gallery__image" src="band06_JakubBodys.jpg" alt="band06_JakubBodys"/>
+					</li>
+					<li class="gallery__item">
+						<img class="gallery__image" src="band07.jpg" alt="band07"/>
+					</li>
+					<li class="gallery__item">
+						<img class="gallery__image" src="band08.jpg" alt="band08"/>
+					</li>
+					<li class="gallery__item">
+						<img class="gallery__image" src="band09.jpg" alt="band09"/>
+					</li>
+					<li class="gallery__item">
+						<img class="gallery__image" src="band10.jpg" alt="band10"/>
+					</li>
+					<li class="gallery__item">
+						<img class="gallery__image" src="band11.jpg" alt="band11" />
+					</li>
+					<li class="gallery__item">
+						<img class="gallery__image" src="band04_JakubBodys.jpg" alt="band04_JakubBodys"/>
+					</li>
+					<li class="gallery__item">
+						<img class="gallery__image" src="band03_WiechnikMarcin.jpg" alt="band03_WiechnikMarcin"/>
+					</li>
+				</ul>
+			</section>
+
+			<section id="contact" class="content-section section-contact">
+				<h2 class="content-section__header">Contact</h2>
+				<div class="contact__info">
+					<img class="contct__image" src="band12.jpg" alt="band12"/>	
+					<address class="contct__address">
+						Tel: 00 48 999 00 00 <br/>
+						e-mail: 6bmband@mail.mail
+					</address>
+				</div>	
+				<form class="form">
+					<div class="form__field">
+						<label class="form__label" for="email">Email</label><br/>
+						<input class="form__input" type="email" name="email" id="email" required />
+					</div>
+					<div class="form__field">
+           	        	<label class="form__label" for="topic">Topic</label><br/>
+						<input class="form__input" type="text" name="topic" id="topic" required />
+					</div>
+					<button class="button contact__button" type="submit">Contact us!</button>
+				</form>	
+
+			</section>
+		</main>
+		<footer class="social">
+			<h2 class="screen-reader-only">Social media links</h2>
+			<ul class="social-links">
+				<li class="social-links__item">
+					<a class="social-links__link" href="https://www.facebook.com/6BMband/">
+						<img src="fb.svg" alt="fb"/>
+					</a>
 				</li>
-				<li class="photos__list-item">
-					<img class="gallery-item__photo" src="band06_JakubBodys.jpg" alt="band06_JakubBodys"/>
+				
+				<li class="social-links__item">
+					<a class="social-links__link" href="https://www.instagram.com/6bmband//">
+						<img src="insta.svg" alt="insta"/>
+					</a>
 				</li>
-				<li class="photos__list-item">
-					<img class="gallery-item__photo" src="band07.jpg" alt="band07"/>
+
+				<li class="social-links__item">
+					<a class="social-links__link" href="https://www.last.fm/pl/music/6bm">
+						<img src="last.svg" alt="las"/>
+					</a>
 				</li>
-				<li class="photos__list-item">
-					<img class="gallery-item__photo" src="band08.jpg" alt="band08"/>
-				</li>
-				<li class="photos__list-item">
-					<img class="gallery-item__photo" src="band09.jpg" alt="band09"/>
-				</li>
-				<li class="photos__list-item">
-					<img class="gallery-item__photo" src="band10.jpg" alt="band10"/>
-				</li>
-				<li class="photos__list-item">
-					<img class="gallery-item__photo" src="band11.jpg" alt="band11" />
-				</li>
-				<li class="photos__list-item">
-					<img class="gallery-item__photo" src="band04_JakubBodys.jpg" alt="band04_JakubBodys"/>
-				</li>
-				<li class="photos__list-item">
-					<img class="gallery-item__photo" src="band03_WiechnikMarcin.jpg" alt="band03_WiechnikMarcin"/>
+
+				<li class="social-links__item">
+					<a class="social-links__link" href="https://www.youtube.com/channel/UCDqm0F_UFieDt_C4TRPbepQ?sub_confirmation=1">
+						<img src="yout.svg" alt="yout"/>
+					</a>
 				</li>
 			</ul>
-		</section>
-
-		<section class="section-contact" id="contact">
-			<h2 class="contact-header">Contact</h2>
-
-			<img class="contct__image" src="band12.jpg" alt="band12"/>	
-			<span>
-				Tel: 00 48 999 00 00
-				<br/>
-				e-mail: 6bmband@mail.mail
-			</span>
-
-			<form>
-				<label>
-					Email
-					<br />
-					<input />
-				</label>
-				<br/>
-				<label>
-					Topic
-					<br />
-					<input />
-				</label>
-				<br/>
-				<button>CONTACT US!</button>
-			</form>	
-
-		</section>
+		</footer>
 	</body>
-
 </html>
