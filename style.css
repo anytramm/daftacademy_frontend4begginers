@@ -5,8 +5,7 @@
 body {
     margin: 0;
     padding: 0;
-
-    background-image: url("background.svg");
+    background-image: url('./images/background.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -22,6 +21,7 @@ ul {
     margin: 0;
     padding: 0;
 }
+
 
 .screen-reader-only {
     position: absolute;
@@ -47,7 +47,24 @@ body {
 
 a {
     color: #EF008E;
+    opacity:0.8;
     text-decoration: none;
+
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-delay: 0s;
+}
+
+a:hover, a:active, a:focus{
+    opacity: 1;
+}
+
+a:visited{
+    opacity:0.6;
+}
+
+a:disabled{
+    opacity: 0.4;
 }
 
 /* 
@@ -60,14 +77,31 @@ PRZYCISKI
     padding: 7px 15px;
     border-radius: 3px;
     background-color: rgba(204, 200, 255, 0.1);
-    border-color: rgba(204, 200, 255, 0.1);
-
+    border-color: rgba(204, 200, 255, 0);
     color: rgba(204, 200, 255, 0.8);
     font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1.6px;
     cursor: pointer;
+
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-delay: 0s;
+}
+
+button:hover, button:active{
+    background-color: rgba(204, 200, 255, 0.5);
+
+}
+
+button:focus{
+    background-color: rgba(204, 200, 255, 0.5);
+    border-color: rgba(204, 200, 255, 0.8);
+}
+
+button:disabled{
+    opacity:0.1;
 }
 
 /* 
@@ -95,12 +129,17 @@ FORMULARZE
     background-color: rgba(219, 216, 251, 0.1);
 }
 
+@media screen and ( max-width: 1024px ) {
+    .form__input {
+        width: 100%;
+    }
+}
+
 /* 
 ######################################
 GŁÓWNY LAYOUT STRONY
 ######################################
 */
-
 
 .page-header {
     position: fixed;
@@ -114,15 +153,23 @@ GŁÓWNY LAYOUT STRONY
     left: 50px;
 }
 
-
 .page-content {
     margin-left: 220px;
     padding: 0 10%;
 }
-@media only screen and (max-width: 1200px){
+
+@media screen and ( max-width: 1280px ) {
+    .page-header {
+        position: static;
+        padding: 30px 0;
+        text-align: center;
+    }
     .page-content {
         margin-left: 0;
-        padding: 10% 10%;
+    }
+
+    .page-footer {
+        position: static;
     }
 }
 
@@ -136,36 +183,21 @@ NAWIGACJA
     padding-top: 15px;
 }
 
-.page-navitagion__item a {
+.page-navigation__item a {
     color: rgba(239, 0, 142, 0.6);
     line-height: 30px;
     text-transform: uppercase;
     letter-spacing: 6.7px;
 }
-.hamburger__button{
-    display:none;
-}
 
-@media only screen and (max-width: 1200px){
-    
-    .page-navigation__items{
-        display: none;
+@media screen and ( min-width: 1025px ) and ( max-width: 1280px ) {
+    .page-navigation__item {
+        display: inline-block;
     }
 
-    .page-brand{
-        display: none;
+    .page-navigation__item {
+        margin: 0 20px;
     }
-
-    .hamburger__button{
-        display:block;
-        position:fixed;
-        top:20px;
-        left: 5vw;
-        width:90vw;
-        z-index: 10;
-    }
-    /*aktywny button wyświetla menu, nieaktywny chowa*/
-    
 }
 
 /* 
@@ -173,7 +205,6 @@ NAWIGACJA
 LINKI DO SOCIAL MEDIA
 ######################################
 */
-
 
 .social-links__item + .social-links__item {
     margin-top: 15px;
@@ -184,11 +215,20 @@ LINKI DO SOCIAL MEDIA
     height: 20px;
 }
 
-@media only screen and (max-width: 1200px){
-    .page-footer{
-        display:none;
+@media screen and ( max-width: 1280px ) {
+    .social-links {
+        text-align: center;
+        padding: 30px 0;
     }
-    /*będą wyswietlane razem z menu*/
+
+    .social-links__item {
+        display: inline-block;
+    }
+
+    .social-links__item + .social-links__item {
+        margin-top: 0;
+        margin-left: 15px;
+    }
 }
 
 /* 
@@ -203,6 +243,13 @@ STYLE WSPÓLNE DLA WSZYSTKICH SEKCJI
     justify-content: center;
     align-items: flex-end;
     min-height: 100vh;
+}
+
+@media screen and ( max-width: 1024px ) {
+    .content-section {
+        min-height: 0;
+        padding-bottom: 100px;
+    }
 }
 
 .content-section__header {
@@ -232,15 +279,64 @@ SEKCJA "HOME"
     display: flex;
     flex-direction: row;
     align-items: center;
-    flex-wrap: nowrap;
 }
-
 
 .band-members__name,
 .band-members__desc {
-    display: none;
+    opacity:0;
+    margin: 0;
+    line-height: 30px;
+    letter-spacing: 4px;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-delay: 0s;
+    
 }
 
+.band-members__name{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.band-members__item{
+    opacity: 0.5;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-delay: 0s;
+}
+
+.band-members__item:hover{
+    opacity: 1;
+}
+.band-members__item:hover .band-members__name{
+    opacity: 1;
+}
+.band-members__item:hover .band-members__desc{
+    opacity: 1;
+}
+
+@media screen and ( min-width: 1025px ) and ( max-width: 1280px ) {
+    .content-section.home-section {
+        justify-content: flex-start;
+        padding-top: 20vh;
+    }
+}
+
+@media screen and ( max-width: 1024px ) {
+    .band-members {
+        flex-direction: column;
+    }
+
+    .band-members__image {
+        margin: 50px 0 10px;
+    }
+
+    .band-members__name,
+    .band-members__desc {
+        display: block;
+        text-align: center;
+    }
+}
 
 /* 
 ######################################
@@ -277,26 +373,16 @@ SEKCJA "ABOUT"
     border-bottom: 3px solid #EF008E;
 }
 
-@media only screen and (max-width: 1200px){
-
-    .about{
-        margin-left: 0;
-        margin-bottom: 0;
-        display:flex;
-        flex-wrap: wrap;
-    }
-    .about__image{
-        width: 80vw;
+@media screen and ( max-width: 1024px ) {
+    .about {
+        margin: 0;
     }
 
     .about__desc {
-        position: relative;
-        left: 0;
-        bottom: 0;
-        width: 80vw;
-        margin-bottom: 100px;
+        position: static;
+        width: 100%;
+        margin-top: 20px;
     }
-
 }
 
 /* 
@@ -309,7 +395,7 @@ SEKCJA "CONCERTS"
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 70vw;
+    width: 80%;
 }
 
 .concerts__item {
@@ -347,13 +433,16 @@ SEKCJA "CONCERTS"
     letter-spacing: 3.8px;
 }
 
-@media only screen and (max-width: 1200px){
+@media screen and ( max-width: 1024px ) {
+    .concerts {
+        display: block;
+        width: auto;
+    }
 
-    .concerts__item{
-        padding: 0 0 3vh 1vw;
+    .concerts__item {
+        padding-left: 0;
     }
 }
-
 
 /* 
 ######################################
@@ -363,9 +452,13 @@ SEKCJA "VIDEO"
 
 .embedded-video {
     border-top: 3px solid #EF008E;
-    width: 70vw;
 }
 
+@media screen and ( max-width: 1024px ) {
+    .embedded-video {
+        max-width: 100%;
+    }
+}
 
 /* 
 ######################################
@@ -377,7 +470,7 @@ SEKCJA "PHOTOS"
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 70vw;
+    width: 80%;
 }
 
 .gallery__item {
@@ -388,16 +481,25 @@ SEKCJA "PHOTOS"
 .gallery__image {
     max-width: 100%;
     border-top: 3px solid #EF008E;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-delay: 0s;
 }
 
-@media only screen and (max-width: 1200px){
+.gallery__image:hover{
+    transform: scale(1.1);
+}
 
-    .gallery__item{
-        padding: 0 0 1vh 1vw;
+@media screen and ( max-width: 1024px ) {
+    .gallery {
+        display: block;
+        width: auto;
     }
 
+    .gallery__item {
+        padding-left: 0;
+    }
 }
-
 
 /* 
 ######################################
@@ -430,22 +532,17 @@ SEKCJA "CONTACT"
     margin-top: 20px;
 }
 
-@media only screen and (max-width: 1200px){
-    .contact__image img{
-        width: 80vw;
+@media screen and ( max-width: 1024px ) {
+    .contact {
+        display: block;
     }
 
     .contact__address {
-        position: relative;
-        left: 0;
-        bottom: 0;
-        width:80vw;
-        padding: 10px;
-        background-color: #25072e;
-        border-bottom: 3px solid #EF008E;
+        padding: 30px 0 0;
     }
 
-        
-
-
+    .contact__form {
+        padding-top: 30px;
+    }
 }
+
